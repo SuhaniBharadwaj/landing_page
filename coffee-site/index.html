@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrewMaster — Craft the Perfect Cup Every Time</title>
+  <meta name="description" content="Learn the secrets of professional coffee brewing with premium beans, expert techniques, and modern equipment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ SVG ICON SPRITE ============ -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-cup" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 8h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Zm13 1h2.2a2.3 2.3 0 0 1 0 4.6H17M7 5c0-1 .8-1.3.8-2.3M11 5c0-1 .8-1.3.8-2.3M5 21h12"/>
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M5 19c0-7 5-13 14-13 0 9-6 14-13 14M5 19c2-4 5-7 9-9"/>
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 20s-7-4.5-9.3-9C1 7.5 3 4.5 6 4.5c2 0 3.2 1.2 4 2.4.8-1.2 2-2.4 4-2.4 3 0 5 3 3.3 6.5C19 15.5 12 20 12 20Z"/>
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 7.5V12l3 2"/>
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5 10 17l9-10"/>
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path fill="currentColor" d="m12 2 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5L12 17.8 6.2 20l1.1-6.5L2.6 8.8l6.5-.9L12 2Z"/>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 21c4-4.5 7-8 7-11a7 7 0 1 0-14 0c0 3 3 6.5 7 11Z"/>
+        <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M6.5 4h3l1.5 4-2 1.5a11 11 0 0 0 5 5l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16 16 0 0 1 4.5 6.2 2 2 0 0 1 6.5 4Z"/>
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="m4 7 8 6 8-6"/>
+      </symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5M6 11l6-6 6 6"/>
+      </symbol>
+      <symbol id="i-facebook" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13.5 21v-7h2.3l.4-2.8h-2.7V9.4c0-.8.3-1.4 1.5-1.4h1.3V5.5c-.6-.1-1.4-.2-2.3-.2-2.3 0-3.8 1.4-3.8 3.9v2H7.7V14h2.5v7h3.3Z"/>
+      </symbol>
+      <symbol id="i-instagram" viewBox="0 0 24 24">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/>
+      </symbol>
+      <symbol id="i-youtube" viewBox="0 0 24 24">
+        <rect x="2.5" y="6" width="19" height="12" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        <path fill="currentColor" d="M10.5 9.3v5.4l4.5-2.7-4.5-2.7Z"/>
+      </symbol>
+      <symbol id="i-pinterest" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M9.5 20c-.5-1.5-.3-3 0-4.3l1.2-5.1c-.3-.6-.4-1.4-.4-2 0-1.9 1.1-3.3 2.5-3.3 1.2 0 1.8.9 1.8 2 0 1.2-.8 3-1.2 4.7-.3 1.4.7 2.5 2.1 2.5 2.5 0 4.2-3.2 4.2-7 0-2.9-2-5.1-5.5-5.1-4 0-6.5 3-6.5 6.3 0 1.2.4 2 1 2.7.1.1.1.2.1.4l-.3 1.3"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <svg class="logo-mark" aria-hidden="true"><use href="#i-cup"/></svg>
+        <span class="logo-text">BrewMaster</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+        <a href="#process" class="btn btn-primary nav-cta">Start Brewing</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" style="background-image:url('images/hero-pour.png')"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner reveal">
+      <h1 class="hero-title">Craft the<br /><span class="accent">Perfect Cup</span><br />Every Time</h1>
+      <p class="hero-sub">Learn the secrets of professional coffee brewing with premium beans, expert techniques, and modern equipment.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Start Brewing</a>
+        <a href="#process" class="btn btn-outline">Watch Tutorial</a>
+      </div>
+
+      <div class="feature-bar">
+        <div class="feature">
+          <svg class="feature-icon" aria-hidden="true"><use href="#i-leaf"/></svg>
+          <h4>Premium Beans</h4>
+          <p>Handpicked quality from the best farms.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature-icon" aria-hidden="true"><use href="#i-cup"/></svg>
+          <h4>Perfect Taste</h4>
+          <p>Balanced flavors in every cup.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature-icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h4>Easy Steps</h4>
+          <p>Simple guides for perfect brewing.</p>
+        </div>
+        <div class="feature">
+          <svg class="feature-icon" aria-hidden="true"><use href="#i-heart"/></svg>
+          <h4>Brew Like a Pro</h4>
+          <p>Professional results at home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. PROCESS ============ -->
+  <section class="process section" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Process</span>
+        <h2 class="section-title">The Art of Coffee Making</h2>
+        <svg class="divider" aria-hidden="true"><use href="#i-cup"/></svg>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-img" style="background-image:url('images/beans.png')"></div>
+          <span class="step-num">01</span>
+          <h3>Select Premium Beans</h3>
+          <p>We source only the finest beans from trusted coffee farms.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-img" style="background-image:url('images/ground.png')"></div>
+          <span class="step-num">02</span>
+          <h3>Grind to Perfection</h3>
+          <p>Choose the right grind size to bring out the best flavors.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-img" style="background-image:url('images/espresso-pour.png')"></div>
+          <span class="step-num">03</span>
+          <h3>Brew with Precision</h3>
+          <p>Use the perfect water temperature and timing for ideal extraction.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-img" style="background-image:url('images/latte-art.png')"></div>
+          <span class="step-num">04</span>
+          <h3>Enjoy Your Coffee</h3>
+          <p>Savor the rich aroma and balanced flavor in every sip.</p>
+        </div>
+      </div>
+
+      <div class="quote-banner reveal" style="background-image:url('images/testimonial-cup.png')">
+        <div class="quote-overlay"></div>
+        <div class="quote-content">
+          <p>Great coffee doesn&apos;t happen by chance.<br />It happens by choice.</p>
+          <a href="#menu" class="btn btn-primary">Start Brewing Today</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. ABOUT ============ -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-text reveal">
+        <span class="eyebrow light">About Us</span>
+        <h2 class="section-title light">Passion for Coffee, Dedication in Every Cup</h2>
+        <p class="about-desc">At BrewMaster, we believe coffee is more than just a drink &mdash; it&apos;s an experience. We&apos;re on a mission to help everyone brew caf&eacute;-quality coffee at home.</p>
+        <ul class="about-list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Expert Brewing Guides</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Premium Quality Ingredients</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Simple Step-by-Step Learning</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Professional Results at Home</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Learn More</a>
+      </div>
+      <div class="about-media reveal">
+        <img src="images/about-barista.png" alt="Barista pouring steamed milk to make latte art" />
+        <span class="badge" aria-hidden="true">Brew Better<br />Live Better</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. MENU ============ -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Menu</span>
+        <h2 class="section-title">Explore Our Coffee</h2>
+        <svg class="divider" aria-hidden="true"><use href="#i-cup"/></svg>
+      </div>
+
+      <div class="menu-grid">
+        <article class="card reveal">
+          <div class="card-img" style="background-image:url('images/menu-espresso.png')"></div>
+          <div class="card-body">
+            <h3>Espresso</h3>
+            <p>Strong, bold, and rich in flavor.</p>
+            <a href="#contact" class="btn btn-outline small">Learn More</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img" style="background-image:url('images/menu-cappuccino.png')"></div>
+          <div class="card-body">
+            <h3>Cappuccino</h3>
+            <p>Perfect balance of coffee and milk.</p>
+            <a href="#contact" class="btn btn-outline small">Learn More</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img" style="background-image:url('images/menu-latte.png')"></div>
+          <div class="card-body">
+            <h3>Latte</h3>
+            <p>Smooth espresso with steamed milk.</p>
+            <a href="#contact" class="btn btn-outline small">Learn More</a>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card-img" style="background-image:url('images/menu-mocha.png')"></div>
+          <div class="card-body">
+            <h3>Mocha</h3>
+            <p>Chocolatey delight for coffee lovers.</p>
+            <a href="#contact" class="btn btn-outline small">Learn More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. TESTIMONIALS ============ -->
+  <section class="testimonials section" id="testimonials">
+    <div class="testimonials-bg" style="background-image:url('images/testimonial-cup.png')"></div>
+    <div class="testimonials-overlay"></div>
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Testimonials</span>
+        <h2 class="section-title light">What Our Coffee Lovers Say</h2>
+        <svg class="divider" aria-hidden="true"><use href="#i-cup"/></svg>
+      </div>
+
+      <div class="testi-grid">
+        <blockquote class="testi reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+          <p>BrewMaster transformed the way I make coffee at home. The guides are easy to follow and results are amazing!</p>
+          <footer>
+            <img src="images/avatar1.png" alt="" />
+            <span><strong>James Wilson</strong><br />Coffee Enthusiast</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testi reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+          <p>I love the step-by-step brewing process. Now I can make caf&eacute;-quality coffee every single day!</p>
+          <footer>
+            <img src="images/avatar2.png" alt="" />
+            <span><strong>Sarah Mitchell</strong><br />Home Barista</span>
+          </footer>
+        </blockquote>
+        <blockquote class="testi reveal">
+          <div class="stars" aria-label="5 out of 5 stars">
+            <svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+          <p>The best coffee experience I&apos;ve had. Premium beans and perfect brewing techniques!</p>
+          <footer>
+            <img src="images/avatar3.png" alt="" />
+            <span><strong>David Robert</strong><br />Coffee Blogger</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. FOOTER / CONTACT ============ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="newsletter reveal">
+        <div>
+          <h3>Join Our Coffee Community</h3>
+          <p>Get brewing tips, special offers, and much more.</p>
+        </div>
+        <form class="news-form" id="newsForm">
+          <input type="email" id="newsEmail" placeholder="Enter your email" aria-label="Email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col brand-col">
+          <a href="#home" class="logo">
+            <svg class="logo-mark" aria-hidden="true"><use href="#i-cup"/></svg>
+            <span class="logo-text">BrewMaster</span>
+          </a>
+          <p>Helping you brew the perfect cup of coffee at home with expert guides, premium ingredients, and passion.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg aria-hidden="true"><use href="#i-facebook"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-instagram"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="#i-youtube"/></svg></a>
+            <a href="#" aria-label="Pinterest"><svg aria-hidden="true"><use href="#i-pinterest"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li><svg aria-hidden="true"><use href="#i-pin"/></svg> 123 Coffee Street, Brew City, BC 12345</li>
+            <li><svg aria-hidden="true"><use href="#i-phone"/></svg> +1 (234) 567-8900</li>
+            <li><svg aria-hidden="true"><use href="#i-mail"/></svg> info@brewmaster.com</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul class="contact-list">
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg> Monday &ndash; Friday<br /><strong>7:00 AM &ndash; 8:00 PM</strong></li>
+            <li><svg aria-hidden="true"><use href="#i-clock"/></svg> Saturday &ndash; Sunday<br /><strong>8:00 AM &ndash; 9:00 PM</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 BrewMaster. All Rights Reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">
+    <svg aria-hidden="true"><use href="#i-arrow-up"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
